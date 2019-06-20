@@ -6,6 +6,36 @@ LAWS:
 
 <https://www.dlapiperdataprotection.com/>
 
+Java JRE:
+---------
+
+### Install:
+
+>	apt-get install default-jre
+
+Test your fingerprint:
+----------------------
+
+<https://panopticlick.eff.org/>
+
+### Stop Fingerprinting:
+
+Brobser|Plugin
+-------|------
+Firefox|Firegloves
+Chrome|Stop Fireprinting
+
+No Full Screen!
+
+Secur all on HTTPS:
+-------------------
+
+Install plugging HTTPS EveryWhere
+
+Ghostery - <https://www.ghostery.com/>
+
+uMatrix - <https://chrome.google.com/webstore/detail/umatrix/ogfcmafjalglgifnmanfmnieipoejdcf/>
+
 Change MAC:
 -----------
 
@@ -327,6 +357,98 @@ Alternative:
 
 <http://identiguy.i2p/>
 
+FreeNET:
+--------
 
+<https://freenetproject.org/>
 
+### Install:
 
+>	wget '<https://freenetproject.org/assets/jnlp/freenet_installer.jar>' -0 installer.jar
+
+>	java -jar installer.jar
+
+Checksum, Hash:
+---------------
+
+### Make a checksum:
+
+>	shasum [ -a \<value of algorithm\> \] \<file_name.txt\>
+
+### GPG:
+
+#### Create your key gpg:
+
+>	gpg -gen-key
+
+#### Listo of Key:
+
+>	gpg -k
+
+#### Export Key:
+
+>	gpg --export -a \<id\> | mail -s "My Pubblic Key" user@mail.com
+
+#### Revoke Key:
+
+gpg --output revoke.key --gen-revoke \<id\>
+
+#### Encrypt a File:
+
+>	pgp --output \<output_file.gpg\> --encrypt --recipient \<id_reciver\> \<file.txt\>
+
+#### Decrypt a File:
+
+>	gpg --output \<output.txt\> --decrypt \<input_file.gpg\>
+
+#### Send File by mail:
+
+>	pgp --armor --encrypt --recipient \<mail_reciver@mail.com\> \<file.txt\>
+
+#### Sign a File:
+
+>	gpg -s \<file.txt\>
+
+### Stenography:
+
+<http://www.spammimic.com/>
+
+Or more clearly:
+
+>	gpg --clearsign \<file.txt\>
+
+#### Verify File:
+
+>	gpg --verify \<file_hash.txt.asc\>
+
+Secure Mail:
+------------
+
+### Install:
+
+>	apt-get install icedove
+
+>	apt-get install enigmail
+
+Backup:
+-------
+
+### Install:
+
+>	apt-get instakk rsync
+
+### Use:
+
+>	rsync -a --progress $HOME\/rsync\/folder_to_copy $HOME\/rsync_backup
+
+Compressed transport:
+
+>	rsync -az --progress $HOME\/rsync\/folder_to_copy $HOME\/rsync_backup
+
+Remote:
+
+>	rsync -az --progress root\@your_domain.com\:\/home\/rsync\/folder_to_copy $HOME\/rsync_backup
+
+With a different port:
+
+>	rsync -az --progress --rsh\=\"ssh -p 22\" root\@your_domain.com\:\/home\/rsync\/folder_to_copy $HOME\/rsync_backup
