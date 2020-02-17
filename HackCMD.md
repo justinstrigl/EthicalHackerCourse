@@ -452,3 +452,30 @@ Remote:
 With a different port:
 
 >	rsync -az --progress --rsh\=\"ssh -p 22\" root\@your_domain.com\:\/home\/rsync\/folder_to_copy $HOME\/rsync_backup
+
+DDos:
+-----
+
+There are 3 type of DDoS Attack:
+
+> Application-layer DDOS attack
+
+> Protocol DOS attack
+
+> Volume-based DDOS attack
+
+### Application layer
+
+ DDOS attack: Application-layer DDOS attacks are attacks that target Windows,
+               Apache, OpenBSD, or other software vulnerabilities 
+               to perform the attack and crash the server.
+
+### Protocol DDOS attack
+
+DDOS attack : A protocol DDOS attacks is a DOS attack on the protocol level. 
+               This category includes Synflood, Ping of Death, and more.
+
+### Volume-based
+
+ DDOS attack: This type of attack includes ICMP floods,
+               UDP floods, and other kind of floods performed via spoofed packets.
